@@ -10,29 +10,41 @@ b.appendChild(a)
 
 list.insertBefore(a,list.firstElementChild)
 
-
+//___________________________________________________________________________________________
 //Move the <h2> of the third section in the second one and vice-versa
-const titlehdeux = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section");
 
 // console.log(titlehdeux)
 
 
 
-const title1 = titlehdeux[1].children[0]
-console.log(title1)
+const title1 = sections[1].children[0]
+// console.log(title1)
 const title2 = document.querySelector("div > h2")
-console.log(title2)
+// console.log(title2)
 
-// titlehdeux.insertBefore(title1,titlehdeux.children[])
+// Select the 2 h2 
+sections[1].insertBefore(title2,title1)
+
+// define the div in order to switch the title in the good place
+const divhDeux = sections[2].children[0]
+// console.log (divhDeux)
+
+// add the title 1 to the divhDeux but it will be the last child as default
+divhDeux.appendChild(title1)
+
+// define lorem part
+const lorem = divhDeux.firstElementChild
+// console.log(lorem)
 
 
+// Insert what (container) ? before what (dans le contenant) ? (order)
+divhDeux.insertBefore(title1,lorem)
 
-title2.after(title1)
-
-// title1.appendChild(title2)
+//_____________________________________________________________________________________________
 
 // Delete the last section from the DOM, we don't need it anyways
 
-// const rmv = document.querySelector('section:last-child');
-// console.log(rmv)
-// rmv.parentElement.removeChild(rmv);
+const rmv = document.querySelector('section:last-child');
+console.log(rmv)
+rmv.parentElement.removeChild(rmv);
