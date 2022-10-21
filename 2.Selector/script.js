@@ -40,7 +40,7 @@ for(i=0; i<imglen; i++) {
 //         }
 //     }
 
-//Alternative
+// P
 
 let ps = document.querySelectorAll('p');
 for (let variant of ps) {
