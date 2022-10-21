@@ -3,10 +3,6 @@
 //     e.title = 'ce titre est lo';
 // });
 
-
-
-
-
 // Display: none
 
 var selectimg = document.querySelectorAll('img')
