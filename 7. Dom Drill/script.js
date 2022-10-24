@@ -90,13 +90,23 @@ select.add(opt2, null);
 
 
 select.addEventListener('change', function(){
-    if(select.value === "2") {
+      if(select.value === "2") {
         document.querySelector("li.important").style.visibility = "hidden";
+      } 
+
+
+      if (select.value === "1") {
+        const film = document.querySelectorAll("li:not(.important)")
+        console.log(film)
+        for (var i=0;i<film.length;i+=1){
+          film[i].style.display = 'none';
+        }
+      
+      }
         
-    } if (select.value === "1") {
-        document.querySelector("li:not(.important)").style.visibility ='hidden';
-       
-       
-    }
-  
-});
+        
+      else if (select.value === "0") {
+        document.querySelector("li:not(.important)").style.visibility ='visible';
+        document.querySelector("li.important").style.visibility = "visible";
+      }
+    });
