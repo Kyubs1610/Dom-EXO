@@ -14,7 +14,69 @@
 ________________________________________________________________________________________________________________________________________
 // define our stuff is always the first step
 // prepend >< append
+________________________________________________________________________________________________________________________________________
+24/10 theorie.bis
+
+Starting with Event
+
+first thing you have to do is to define your stuff with a var, const or let
+
+const squares= document.querySelectorAll('.actionsquare')
+
+console.log(squares)
+log is a function () => {}
+all the functions have their own rules
+
+element.addEventListener ('click', (event) => {} )
+
+addeventlistenner is a function which take an event & a callback function
+
+
+
+squares.addEventListener('click',)
+it will not work if we put squares so we have to put a loop because there is an array list
+
+const newSquaresContainer = document.querySelector('.displayedsquare')
+squares.forEach((square) => {
+    console.log(square)
+    square.addEventListener('click', (event) => {})
+    console.log(event) 
+    newSquaresContainer.insertAdjacentHtml('beforebgein', event.target.outerHTML)
+})
+
+forEach will have a callback function(another function)
+*The loop will run 3 times because there are 3 squares
+*we define square because he will run element after element
+*event will appear in the console.log only if we clicked 
+*insertAdjacentHtml will add the element before or after a closing or opening tag
+*beforeend,afterend,beforebegin,afterbegin
+
+addEventListener ('click/keyup/keydown/touch(for phone)/change(select boxees)/submit(forms)/DomContentLoaded', )
+
+Every event depend from a tag for exemple change won't work on a div but only on select
+`` are powerfull in javascript see documentation on line
+
+document.body.addEventListener('keyup',(event) =>{
+    console.log(event)
+    if(event.key === ' '){ 
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor
+    }
+    if(event.key === 'l'){
+    logsContainer.innerHTML = ""
+    }
+    if(event.key === 's'){
+    newSquaresContainer.innertHTML = ""
+    }
+})
+
+
+
+
 //  -->
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
